@@ -14,10 +14,14 @@
   return NO;
 }
 
-- (void)viewDidDisappear:(BOOL)animated
+- (void)viewWillDisappear:(BOOL)animated
 {
   [super viewDidDisappear:animated];
   [_rctDelegate videoPlayerViewControllerWillDismiss:self];
+}
+- (void)viewDidDisappear:(BOOL)animated
+{
+  [super viewDidDisappear:animated];
   [_rctDelegate videoPlayerViewControllerDidDismiss:self];
 }
 
