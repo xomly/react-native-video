@@ -16,7 +16,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-  [super viewDidDisappear:animated];
+  [super viewWillDisappear:animated];
   [_rctDelegate videoPlayerViewControllerWillDismiss:self];
 }
 - (void)viewDidDisappear:(BOOL)animated
