@@ -158,6 +158,10 @@ static int const RCTVideoUnset = -1;
   viewController.preferredOrientation = _fullscreenOrientation;
   
   viewController.view.frame = self.bounds;
+  
+  UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:nil];
+  [viewController.view addGestureRecognizer:panGestureRecognizer];
+  
   viewController.player = player;
   return viewController;
 }
